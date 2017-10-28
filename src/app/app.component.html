@@ -1,0 +1,12 @@
+<div>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-success col-lg-4 col-lg-offset-4" *ngFor="let student of students" (click)="selectStudent(student)">
+      <span>{{student?.ime}} {{student?.prezime}}</span>
+    </li>
+  </ul>
+
+  <app-student-details [student]="selectedStudent"></app-student-details>
+</div>
+
+<router-outlet>
+
